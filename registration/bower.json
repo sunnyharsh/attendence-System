@@ -1,0 +1,21 @@
+{
+  "name": "registrationPage",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "sunnyharsh <sunnyharshsunny12345@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^4.0.0",
+    "angular": "^1.6.9"
+  }
+}

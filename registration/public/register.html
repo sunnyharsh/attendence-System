@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./bower_components/angular/angular.min.js"></script>
+</head>
+<body ng-app>
+    <form novalidate name="registration"  action="register" method="post">
+            <div class="form-group">
+                <input type="text" ng-model="name" name="name" id="name" tabindex="1" class="form-control" placeholder="Enter your name " required>
+                <span class="error" ng-show="registration.name.$touched && registration.name.$pristine && registration.name.$error.required">
+                        name can't be empty
+                </span>
+            </div>
+
+            <div class="form-group">
+                    <input type="text" ng-model="userid" pattern="[0-9]{3,5}[a-z]{1,2}" name="userid" id="userid" tabindex="1" class="form-control" placeholder="Enter your userId number" value="">
+                    <span class="error" ng-show="registration.userid.$touched"></span>
+                    {{registration.userid}}
+            </div>
+
+            <div class="form-group">
+                <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Enter e-mail id" value="">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="phone" id="phone" tabindex="2" class="form-control" placeholder="Enter your phone number here">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="semester" id="semester" tabindex="2" class="form-control" placeholder="Enter your semester">
+            </div>
+
+            <div class="form-group">
+                    <input type="text" name="stream" id="stream" tabindex="2" class="form-control" placeholder="Enter your stream">
+            </div>
+
+            <div class="form-group">
+                    <input type="text" name="section" id="section" tabindex="2" class="form-control" placeholder="Enter your section">
+            </div> 
+
+            <div class="form-group">
+                    <input type="text" name="subject" id="subject" tabindex="2" class="form-control" placeholder="Enter your subject">
+            </div> 
+            <button class="btn btn-success">submit</button>
+            <button class="btn btn-danger">submit</button>
+        </form>
+</body>
+</html>
